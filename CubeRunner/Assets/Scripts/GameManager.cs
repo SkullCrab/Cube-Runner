@@ -7,23 +7,22 @@ public class GameManager : MonoBehaviour
     bool gameHasEnded = false;
     public GameObject completeLevelUI;
 
-    public void CompleteLevel()
+    public void CompleteLevel() //Shows Level Complete
     {
         completeLevelUI.SetActive(true);
     }
 
     public void GameOver()
     {
-        if (gameHasEnded == false)
+        if (gameHasEnded == false) //Game has ended
         {
             gameHasEnded = true;
-            Debug.Log("Game Over!");
             Invoke("Restart", restartDelay);
         }
 
     }
 
-    void Restart()
+    void Restart() //Restarts level
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
