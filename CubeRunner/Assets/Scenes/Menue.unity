@@ -198,7 +198,6 @@ GameObject:
   - component: {fileID: 717172047}
   - component: {fileID: 717172050}
   - component: {fileID: 717172049}
-  - component: {fileID: 717172048}
   - component: {fileID: 717172051}
   m_Layer: 5
   m_Name: Welcome
@@ -229,17 +228,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &717172048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 717172046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc5fc55009bc644499c38f4de37b993d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &717172049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,6 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f26801e82351240a3f52b238bb5941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movement: {fileID: 0}
+  PausedUI: {fileID: 0}
 --- !u!1 &832462239
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +365,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 717172048}
+      - m_Target: {fileID: 717172051}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -568,7 +558,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1560570262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 313, y: 279.5, z: 0}
+  m_LocalPosition: {x: 313.5, y: 279.5, z: 0}
   m_LocalScale: {x: 0.9316667, y: 0.9316667, z: 0.9316667}
   m_Children:
   - {fileID: 717172047}
