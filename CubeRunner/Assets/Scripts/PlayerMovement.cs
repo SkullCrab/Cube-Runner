@@ -11,9 +11,16 @@ public class PlayerMovement : MonoBehaviour
     public GameObject PausedUI;
     public PlayerMovement movement;
 
+    /*private void Start()
+    {
+        Screen.showCursor = false;
+        Screen.lockCursor = true;
+    }
+    */
     // Update is called once per frame
     void FixedUpdate()
     {
+
         rb.AddForce(0, 0, forwardForce * Time.deltaTime); //Constantly pushing player forward
 
         if (Input.GetKey("d"))
@@ -36,9 +43,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            rb.AddForce(0, 0, (-forwardForce * 0.5f) );
-            movement.enabled = false;
             PausedUI.SetActive(true);
+            if (Time.timeScale == 1) 
+                Time.timeScale = 0.0001f;
         }
     }
 }

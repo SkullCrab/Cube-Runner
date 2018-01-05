@@ -21,7 +21,8 @@ public class Menue : MonoBehaviour {
     {
         Debug.Log("Resume");
         PausedUI.SetActive(false);
-        movement.enabled = true;    
+        movement.enabled = true;
+        Time.timeScale = 1;
     }
 
 }
